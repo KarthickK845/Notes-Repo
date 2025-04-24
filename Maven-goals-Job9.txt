@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("Welcome"){
+            steps{
+                echo "Welcome"
+            }
+        }
+        stage("Git Cloning"){
+            steps{
+                git branch: 'main', url: 'https://github.com/KarthickK845/Maven-Demo-Repo.git'
+            }
+        }
+        stage("Maven Goals"){
+            steps{
+                
+            }
+        }
+    }
+}

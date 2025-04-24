@@ -1,0 +1,156 @@
+
+C:\Users\devops8>cd \
+
+C:\>md LocalRepos_Karthick
+
+C:\>cd LocalRepos_Karthick
+
+C:\LocalRepos_Karthick>git clone https://github.com/KarthickK845/Repo-4.git
+Cloning into 'Repo-4'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 12 (delta 1), reused 4 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (1/1), done.
+
+C:\LocalRepos_Karthick>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AEC1-4A58
+
+ Directory of C:\LocalRepos_Karthick
+
+04/23/2025  02:50 PM    <DIR>          .
+04/23/2025  02:50 PM    <DIR>          Repo-4
+               0 File(s)              0 bytes
+               2 Dir(s)  100,864,786,432 bytes free
+
+C:\LocalRepos_Karthick>cd Repo-4
+
+C:\LocalRepos_Karthick\Repo-4>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AEC1-4A58
+
+ Directory of C:\LocalRepos_Karthick\Repo-4
+
+04/23/2025  02:50 PM    <DIR>          .
+04/23/2025  02:50 PM    <DIR>          ..
+04/23/2025  02:50 PM                32 Delhi.txt
+04/23/2025  02:50 PM                41 Java.txt
+04/23/2025  02:50 PM                40 Kochi.txt
+04/23/2025  02:50 PM                38 Mumbai.txt
+               4 File(s)            151 bytes
+               2 Dir(s)  100,864,651,264 bytes free
+
+C:\LocalRepos_Karthick\Repo-4>cd  \
+
+C:\>cd C:\Java_Projects_Karthick K\172-SpringBoot
+
+C:\Java_Projects_Karthick K\172-SpringBoot>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AEC1-4A58
+
+ Directory of C:\Java_Projects_Karthick K\172-SpringBoot
+
+04/23/2025  03:37 PM    <DIR>          .
+04/23/2025  03:36 PM    <DIR>          ..
+04/23/2025  03:37 PM             2,357 .classpath
+04/23/2025  03:36 PM                38 .gitattributes
+04/23/2025  03:36 PM               395 .gitignore
+04/23/2025  03:36 PM    <DIR>          .mvn
+04/23/2025  03:37 PM               719 .project
+04/23/2025  03:37 PM    <DIR>          .settings
+04/23/2025  03:36 PM             1,243 HELP.md
+04/23/2025  03:36 PM            10,665 mvnw
+04/23/2025  03:36 PM             6,912 mvnw.cmd
+04/23/2025  03:36 PM             1,411 pom.xml
+04/23/2025  03:36 PM    <DIR>          src
+04/23/2025  03:37 PM    <DIR>          target
+               8 File(s)         23,740 bytes
+               6 Dir(s)  100,112,945,152 bytes free
+
+C:\Java_Projects_Karthick K\172-SpringBoot>mvn clean compile install
+'mvn' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git init
+Initialized empty Git repository in C:/Java_Projects_Karthick K/172-SpringBoot/.git/
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitattributes
+        .gitignore
+        .mvn/
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git add .
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.mvn/wrapper/maven-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mvnw.cmd', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/training/Application.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/java/com/training/ApplicationTests.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git commit -m "first maven commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'devops8@domainc.(none)')
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git config --global user.email "karthic979@gmail.com"
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git config --global user.name "KarthickK845"
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git commit -m "first commit"
+[master (root-commit) 5fedaf6] first commit
+ 10 files changed, 557 insertions(+)
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 .mvn/wrapper/maven-wrapper.properties
+ create mode 100644 mvnw
+ create mode 100644 mvnw.cmd
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/training/Application.java
+ create mode 100644 src/main/java/com/training/ui/HelloController.java
+ create mode 100644 src/main/resources/application.properties
+ create mode 100644 src/test/java/com/training/ApplicationTests.java
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git branch -M main
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git remote add origin https://github.com/KarthickK845/Maven-Demo-Repo.git
+
+C:\Java_Projects_Karthick K\172-SpringBoot>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (25/25), 8.66 KiB | 354.00 KiB/s, done.
+Total 25 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/KarthickK845/Maven-Demo-Repo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Java_Projects_Karthick K\172-SpringBoot>

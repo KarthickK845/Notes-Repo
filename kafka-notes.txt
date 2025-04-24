@@ -1,0 +1,41 @@
+1 start zookeeper server
+
+then start kafka server
+
+Open 2 more cmd prompts from your Kafka folder and in one of the cmd prompt windows, give below
+
+C:\kafkaKarthick>bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9011 --replication-factor 1 --partitions 1 --topic Hello-Kafka
+Created topic Hello-Kafka.
+
+one more prompt
+
+Microsoft Windows [Version 10.0.20348.3091]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\kafkaKarthick>bin\windows\kafka-console-producer --broker-list localhost:9011 --topic Hello-Kafka
+>Welcome to Kafka
+>This is my second message in kafka
+>Goodbye
+>
+
+after that press Ctrl+C 
+it will ask like
+
+Terminate batch job (Y/N)?
+
+=====
+
+Microsoft Windows [Version 10.0.20348.3091]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\kafkaKarthick>bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9011 --replication-factor 1 --partitions 1 --topic Hello-Kafka
+Created topic Hello-Kafka.
+
+C:\kafkaKarthick>bin\windows\kafka-console-consumer --bootstrap-server localhost:9011 --topic Hello-Kafka --from-beginning
+Welcome to Kafka
+This is my second message in kafka
+Goodbye
+Processed a total of 3 messages
+Terminate batch job (Y/N)? y
+
+C:\kafkaKarthick>

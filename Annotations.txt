@@ -1,0 +1,6 @@
+@Configuration - to set a Configuration class
+@Bean(name="helloWorldBean") - to define a bean method
+@Scope("prototype") - to set the scope of a bean, here setting to prototype, used with @Bean annotation, by default the scope is Singleton if this
+						annotation is not used
+@Autowired   		- asking Spring to autowire(inject) the object here
+@Qualifier("CochinAddress")  - to make a particular bean qualified for autowiring

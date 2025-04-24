@@ -1,0 +1,407 @@
+Microsoft Windows [Version 10.0.20348.3091]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AEC1-4A58
+
+ Directory of C:\apache-zookeeper-3.9.3-bin-Karthick
+
+04/24/2025  12:06 PM    <DIR>          .
+04/24/2025  12:06 PM    <DIR>          apache-zookeeper-3.9.3-bin
+04/24/2025  12:06 PM    <DIR>          bin
+04/24/2025  12:06 PM    <DIR>          conf
+02/04/2025  08:48 PM    <DIR>          data
+04/24/2025  12:06 PM    <DIR>          docs
+04/24/2025  12:06 PM    <DIR>          lib
+10/18/2024  04:46 AM            11,358 LICENSE.txt
+10/18/2024  04:46 AM             2,084 NOTICE.txt
+10/18/2024  04:46 AM             2,335 README.md
+10/18/2024  04:46 AM             3,570 README_packaging.md
+               4 File(s)         19,347 bytes
+               7 Dir(s)  92,160,794,624 bytes free
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>dir bin
+ Volume in drive C has no label.
+ Volume Serial Number is AEC1-4A58
+
+ Directory of C:\apache-zookeeper-3.9.3-bin-Karthick\bin
+
+04/24/2025  12:06 PM    <DIR>          .
+04/24/2025  12:06 PM    <DIR>          ..
+04/24/2025  12:06 PM    <DIR>          apache-zookeeper-3.9.3-bin
+10/18/2024  04:46 AM               232 README.txt
+10/18/2024  04:46 AM             1,978 zkCleanup.sh
+10/18/2024  04:46 AM             1,115 zkCli.cmd
+10/18/2024  04:46 AM             1,576 zkCli.sh
+10/18/2024  04:46 AM             1,810 zkEnv.cmd
+10/18/2024  04:46 AM             3,947 zkEnv.sh
+10/18/2024  04:46 AM             4,559 zkServer-initialize.sh
+10/18/2024  04:46 AM             1,243 zkServer.cmd
+10/18/2024  04:46 AM            11,680 zkServer.sh
+10/18/2024  04:46 AM               987 zkSnapshotComparer.cmd
+10/18/2024  04:46 AM             1,374 zkSnapshotComparer.sh
+10/18/2024  04:46 AM               995 zkSnapshotRecursiveSummaryToolkit.cmd
+10/18/2024  04:46 AM             1,422 zkSnapshotRecursiveSummaryToolkit.sh
+10/18/2024  04:46 AM               988 zkSnapShotToolkit.cmd
+10/18/2024  04:46 AM             1,377 zkSnapShotToolkit.sh
+10/18/2024  04:46 AM               996 zkTxnLogToolkit.cmd
+10/18/2024  04:46 AM             1,385 zkTxnLogToolkit.sh
+              17 File(s)         37,664 bytes
+               3 Dir(s)  92,167,536,640 bytes free
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>bin\zkServer.cmd
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>call "C:\Program Files\Java\jdk-17"\bin\java "-Dzookeeper.log.dir=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\logs" "-Dzookeeper.log.file=zookeeper-devops8-server-DOMAINC.log" "-XX:+HeapDumpOnOutOfMemoryError" "-XX:OnOutOfMemoryError=cmd /c taskkill /pid %%p /t /f" -cp "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf" org.apache.zookeeper.server.quorum.QuorumPeerMain "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg"
+2025-04-24 12:30:51,408 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:30:51,418 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:30:51,438 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9011
+2025-04-24 12:30:51,443 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:30:51,448 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:30:51,449 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:30:51,456 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-04-24 12:30:51,458 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-04-24 12:30:51,460 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-04-24 12:30:51,461 [myid:] - WARN  [main:o.a.z.s.q.QuorumPeerMain@139] - Either no config or no quorum defined in config, running in standalone mode
+2025-04-24 12:30:51,467 [myid:] - INFO  [main:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-04-24 12:30:51,473 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:30:51,476 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:30:51,480 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9011
+2025-04-24 12:30:51,488 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:30:51,489 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:30:51,490 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:30:51,492 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+2025-04-24 12:30:51,538 [myid:] - INFO  [main:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@710726a3
+2025-04-24 12:30:51,594 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@51] - ACL digest algorithm is: SHA1
+2025-04-24 12:30:51,595 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-04-24 12:30:51,609 [myid:] - INFO  [main:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-04-24 12:30:51,646 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:30:51,647 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   ______                  _                   
+2025-04-24 12:30:51,654 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  |___  /                 | |                  
+2025-04-24 12:30:51,656 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __
+2025-04-24 12:30:51,657 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2025-04-24 12:30:51,659 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |
+2025-04-24 12:30:51,660 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2025-04-24 12:30:51,661 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               | |
+2025-04-24 12:30:51,670 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               |_|
+2025-04-24 12:30:51,671 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:30:56,709 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-04-24 12:30:56,710 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:host.name=domainc
+2025-04-24 12:30:56,715 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.version=17.0.11
+2025-04-24 12:30:56,716 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.vendor=Oracle Corporation
+2025-04-24 12:30:56,717 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.home=C:\Program Files\Java\jdk-17
+2025-04-24 12:30:56,718 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.class.path=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\audience-annotations-0.12.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-cli-1.5.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-io-2.17.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-annotations-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-core-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-databind-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\javax.servlet-api-3.1.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-http-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-io-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-security-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-server-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-servlet-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-ajax-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jline-2.14.6.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-classic-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-core-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\metrics-core-4.1.12.1.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-buffer-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-codec-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-handler-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-resolver-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-windows-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-classes-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-classes-epoll-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-epoll-4.1.113.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-unix-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_common-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_hotspot-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_servlet-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\slf4j-api-1.7.30.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\snappy-java-1.1.10.5.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-jute-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-prometheus-metrics-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf
+2025-04-24 12:30:56,720 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.library.path=C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-17\bin;C:\Users\devops8\AppData\Local\Microsoft\WindowsApps;;.
+2025-04-24 12:30:56,722 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.io.tmpdir=C:\Users\devops8\AppData\Local\Temp\5\
+2025-04-24 12:30:56,723 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.compiler=<NA>
+2025-04-24 12:30:56,736 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.name=Windows Server 2022
+2025-04-24 12:30:56,737 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.arch=amd64
+2025-04-24 12:30:56,738 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.version=10.0
+2025-04-24 12:30:56,739 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.name=devops8
+2025-04-24 12:30:56,741 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.home=C:\Users\devops8
+2025-04-24 12:30:56,742 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.dir=C:\apache-zookeeper-3.9.3-bin-Karthick
+2025-04-24 12:30:56,751 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.free=1261MB
+2025-04-24 12:30:56,752 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.max=20480MB
+2025-04-24 12:30:56,753 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.total=1280MB
+2025-04-24 12:30:56,755 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@149] - zookeeper.enableEagerACLCheck = false
+2025-04-24 12:30:56,756 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@162] - zookeeper.digest.enabled = true
+2025-04-24 12:30:56,758 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@166] - zookeeper.closeSessionTxn.enabled = true
+2025-04-24 12:30:56,759 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@2242] - zookeeper.serializeLastProcessedZxid.enabled = true
+2025-04-24 12:30:56,766 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1585] - zookeeper.flushDelay = 0 ms
+2025-04-24 12:30:56,767 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1594] - zookeeper.maxWriteQueuePollTime = 0 ms
+2025-04-24 12:30:56,768 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1603] - zookeeper.maxBatchSize=1000
+2025-04-24 12:30:56,769 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@287] - zookeeper.intBufferStartingSizeBytes = 1024
+2025-04-24 12:30:56,774 [myid:] - INFO  [main:o.a.z.s.BlueThrottle@141] - Weighed connection throttling is disabled
+2025-04-24 12:30:56,781 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-04-24 12:30:56,782 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-04-24 12:30:56,785 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 4000 ms
+2025-04-24 12:30:56,786 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 40000 ms
+2025-04-24 12:30:56,795 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getData response cache size is initialized with value 400.
+2025-04-24 12:30:56,796 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getChildren response cache size is initialized with value 400.
+2025-04-24 12:30:56,800 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-04-24 12:30:56,805 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-04-24 12:30:56,806 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-04-24 12:30:56,807 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-04-24 12:30:56,808 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-04-24 12:30:56,809 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-04-24 12:30:56,821 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-04-24 12:30:56,822 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-04-24 12:30:56,823 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@385] - Created server with tickTime 2000 ms minSessionTimeout 4000 ms maxSessionTimeout 40000 ms clientPortListenBacklog -1 dataLogdir data\version-2 snapdir data\version-2
+2025-04-24 12:30:56,917 [myid:] - INFO  [main:o.e.j.u.l.Log@170] - Logging initialized @6602ms to org.eclipse.jetty.util.log.Slf4jLog
+2025-04-24 12:30:57,106 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1662] - o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STOPPED} contextPath ends with /*
+2025-04-24 12:30:57,107 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1673] - Empty contextPath
+2025-04-24 12:30:57,179 [myid:] - INFO  [main:o.e.j.s.Server@375] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.11+7-LTS-207
+2025-04-24 12:30:57,272 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@334] - DefaultSessionIdManager workerName=node0
+2025-04-24 12:30:57,273 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@339] - No SessionScavenger set, using defaults
+2025-04-24 12:30:57,281 [myid:] - INFO  [main:o.e.j.s.s.HouseKeeper@132] - node0 Scavenging every 600000ms
+2025-04-24 12:30:57,291 [myid:] - WARN  [main:o.e.j.s.ConstraintSecurityHandler@759] - ServletContext@o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STARTING} has uncovered http methods for path: /*
+2025-04-24 12:30:57,320 [myid:] - INFO  [main:o.e.j.s.h.ContextHandler@921] - Started o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,AVAILABLE}
+2025-04-24 12:30:57,345 [myid:] - ERROR [main:o.a.z.s.ZooKeeperServerMain@86] - Unable to start AdminServer, exiting abnormally
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:199)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:155)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.initializeAndRun(ZooKeeperServerMain.java:113)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.main(ZooKeeperServerMain.java:68)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:141)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)
+Caused by: java.io.IOException: Failed to bind to /0.0.0.0:8080
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+        at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+        at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+        at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:190)
+        ... 5 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+        at java.base/sun.nio.ch.Net.bind0(Native Method)
+        at java.base/sun.nio.ch.Net.bind(Net.java:555)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+        at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:89)
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+        ... 12 common frames omitted
+Unable to start AdminServer, exiting abnormally
+2025-04-24 12:30:57,358 [myid:] - INFO  [main:o.a.z.a.ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2025-04-24 12:30:57,365 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 4
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>endlocal
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>bin\zkServer.cmd
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>call "C:\Program Files\Java\jdk-17"\bin\java "-Dzookeeper.log.dir=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\logs" "-Dzookeeper.log.file=zookeeper-devops8-server-DOMAINC.log" "-XX:+HeapDumpOnOutOfMemoryError" "-XX:OnOutOfMemoryError=cmd /c taskkill /pid %%p /t /f" -cp "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf" org.apache.zookeeper.server.quorum.QuorumPeerMain "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg"
+2025-04-24 12:34:41,485 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:34:41,510 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:34:41,527 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9011
+2025-04-24 12:34:41,531 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:34:41,535 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:34:41,536 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:34:41,543 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-04-24 12:34:41,547 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-04-24 12:34:41,548 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-04-24 12:34:41,549 [myid:] - WARN  [main:o.a.z.s.q.QuorumPeerMain@139] - Either no config or no quorum defined in config, running in standalone mode
+2025-04-24 12:34:41,554 [myid:] - INFO  [main:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-04-24 12:34:41,561 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:34:41,564 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:34:41,565 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9011
+2025-04-24 12:34:41,566 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:34:41,567 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:34:41,573 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:34:41,574 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+2025-04-24 12:34:41,617 [myid:] - INFO  [main:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@710726a3
+2025-04-24 12:34:41,672 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@51] - ACL digest algorithm is: SHA1
+2025-04-24 12:34:41,672 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-04-24 12:34:41,686 [myid:] - INFO  [main:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-04-24 12:34:41,713 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:34:41,714 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   ______                  _                   
+2025-04-24 12:34:41,718 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  |___  /                 | |                  
+2025-04-24 12:34:41,720 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __
+2025-04-24 12:34:41,721 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2025-04-24 12:34:41,723 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |
+2025-04-24 12:34:41,724 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2025-04-24 12:34:41,725 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               | |
+2025-04-24 12:34:41,731 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               |_|
+2025-04-24 12:34:41,733 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:34:52,810 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-04-24 12:34:52,811 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:host.name=domainc
+2025-04-24 12:34:52,822 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.version=17.0.11
+2025-04-24 12:34:52,824 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.vendor=Oracle Corporation
+2025-04-24 12:34:52,825 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.home=C:\Program Files\Java\jdk-17
+2025-04-24 12:34:52,827 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.class.path=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\audience-annotations-0.12.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-cli-1.5.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-io-2.17.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-annotations-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-core-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-databind-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\javax.servlet-api-3.1.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-http-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-io-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-security-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-server-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-servlet-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-ajax-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jline-2.14.6.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-classic-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-core-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\metrics-core-4.1.12.1.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-buffer-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-codec-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-handler-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-resolver-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-windows-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-classes-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-classes-epoll-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-epoll-4.1.113.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-unix-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_common-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_hotspot-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_servlet-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\slf4j-api-1.7.30.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\snappy-java-1.1.10.5.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-jute-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-prometheus-metrics-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf
+2025-04-24 12:34:52,829 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.library.path=C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-17\bin;C:\Users\devops8\AppData\Local\Microsoft\WindowsApps;;.
+2025-04-24 12:34:52,830 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.io.tmpdir=C:\Users\devops8\AppData\Local\Temp\5\
+2025-04-24 12:34:52,831 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.compiler=<NA>
+2025-04-24 12:34:52,844 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.name=Windows Server 2022
+2025-04-24 12:34:52,846 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.arch=amd64
+2025-04-24 12:34:52,847 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.version=10.0
+2025-04-24 12:34:52,848 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.name=devops8
+2025-04-24 12:34:52,849 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.home=C:\Users\devops8
+2025-04-24 12:34:52,851 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.dir=C:\apache-zookeeper-3.9.3-bin-Karthick
+2025-04-24 12:34:52,852 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.free=1261MB
+2025-04-24 12:34:52,853 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.max=20480MB
+2025-04-24 12:34:52,860 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.total=1280MB
+2025-04-24 12:34:52,861 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@149] - zookeeper.enableEagerACLCheck = false
+2025-04-24 12:34:52,863 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@162] - zookeeper.digest.enabled = true
+2025-04-24 12:34:52,864 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@166] - zookeeper.closeSessionTxn.enabled = true
+2025-04-24 12:34:52,865 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@2242] - zookeeper.serializeLastProcessedZxid.enabled = true
+2025-04-24 12:34:52,867 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1585] - zookeeper.flushDelay = 0 ms
+2025-04-24 12:34:52,873 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1594] - zookeeper.maxWriteQueuePollTime = 0 ms
+2025-04-24 12:34:52,874 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1603] - zookeeper.maxBatchSize=1000
+2025-04-24 12:34:52,875 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@287] - zookeeper.intBufferStartingSizeBytes = 1024
+2025-04-24 12:34:52,879 [myid:] - INFO  [main:o.a.z.s.BlueThrottle@141] - Weighed connection throttling is disabled
+2025-04-24 12:34:52,883 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-04-24 12:34:52,887 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-04-24 12:34:52,892 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 4000 ms
+2025-04-24 12:34:52,893 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 40000 ms
+2025-04-24 12:34:52,899 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getData response cache size is initialized with value 400.
+2025-04-24 12:34:52,902 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getChildren response cache size is initialized with value 400.
+2025-04-24 12:34:52,906 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-04-24 12:34:52,907 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-04-24 12:34:52,908 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-04-24 12:34:52,910 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-04-24 12:34:52,918 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-04-24 12:34:52,920 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-04-24 12:34:52,933 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-04-24 12:34:52,934 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-04-24 12:34:52,935 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@385] - Created server with tickTime 2000 ms minSessionTimeout 4000 ms maxSessionTimeout 40000 ms clientPortListenBacklog -1 dataLogdir data\version-2 snapdir data\version-2
+2025-04-24 12:34:53,036 [myid:] - INFO  [main:o.e.j.u.l.Log@170] - Logging initialized @12607ms to org.eclipse.jetty.util.log.Slf4jLog
+2025-04-24 12:34:53,232 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1662] - o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STOPPED} contextPath ends with /*
+2025-04-24 12:34:53,233 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1673] - Empty contextPath
+2025-04-24 12:34:53,321 [myid:] - INFO  [main:o.e.j.s.Server@375] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.11+7-LTS-207
+2025-04-24 12:34:53,424 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@334] - DefaultSessionIdManager workerName=node0
+2025-04-24 12:34:53,425 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@339] - No SessionScavenger set, using defaults
+2025-04-24 12:34:53,433 [myid:] - INFO  [main:o.e.j.s.s.HouseKeeper@132] - node0 Scavenging every 600000ms
+2025-04-24 12:34:53,448 [myid:] - WARN  [main:o.e.j.s.ConstraintSecurityHandler@759] - ServletContext@o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STARTING} has uncovered http methods for path: /*
+2025-04-24 12:34:53,481 [myid:] - INFO  [main:o.e.j.s.h.ContextHandler@921] - Started o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,AVAILABLE}
+2025-04-24 12:34:53,507 [myid:] - ERROR [main:o.a.z.s.ZooKeeperServerMain@86] - Unable to start AdminServer, exiting abnormally
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:199)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:155)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.initializeAndRun(ZooKeeperServerMain.java:113)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.main(ZooKeeperServerMain.java:68)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:141)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)
+Caused by: java.io.IOException: Failed to bind to /0.0.0.0:8080
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+        at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+        at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+        at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:190)
+        ... 5 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+        at java.base/sun.nio.ch.Net.bind0(Native Method)
+        at java.base/sun.nio.ch.Net.bind(Net.java:555)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+        at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:89)
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+        ... 12 common frames omitted
+Unable to start AdminServer, exiting abnormally
+2025-04-24 12:34:53,519 [myid:] - INFO  [main:o.a.z.a.ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2025-04-24 12:34:53,525 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 4
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>endlocal
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>bin\zkServer.cmd
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>call "C:\Program Files\Java\jdk-17"\bin\java "-Dzookeeper.log.dir=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\logs" "-Dzookeeper.log.file=zookeeper-devops8-server-DOMAINC.log" "-XX:+HeapDumpOnOutOfMemoryError" "-XX:OnOutOfMemoryError=cmd /c taskkill /pid %%p /t /f" -cp "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf" org.apache.zookeeper.server.quorum.QuorumPeerMain "C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg"
+2025-04-24 12:36:03,310 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:36:03,329 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:36:03,346 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9111
+2025-04-24 12:36:03,351 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:36:03,356 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:36:03,357 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:36:03,366 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-04-24 12:36:03,368 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-04-24 12:36:03,370 [myid:] - INFO  [main:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-04-24 12:36:03,371 [myid:] - WARN  [main:o.a.z.s.q.QuorumPeerMain@139] - Either no config or no quorum defined in config, running in standalone mode
+2025-04-24 12:36:03,377 [myid:] - INFO  [main:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-04-24 12:36:03,386 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf\zoo.cfg
+2025-04-24 12:36:03,391 [myid:] - WARN  [main:o.a.z.s.u.VerifyingFileFactory@65] - data is relative. Prepend .\ to indicate that you're sure!
+2025-04-24 12:36:03,398 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:9111
+2025-04-24 12:36:03,399 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@444] - secureClientPort is not set
+2025-04-24 12:36:03,400 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@460] - observerMasterPort is not set
+2025-04-24 12:36:03,403 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@477] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-04-24 12:36:03,404 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+2025-04-24 12:36:03,458 [myid:] - INFO  [main:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@710726a3
+2025-04-24 12:36:03,512 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@51] - ACL digest algorithm is: SHA1
+2025-04-24 12:36:03,513 [myid:] - INFO  [main:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-04-24 12:36:03,529 [myid:] - INFO  [main:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-04-24 12:36:03,552 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:36:03,552 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   ______                  _                   
+2025-04-24 12:36:03,557 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  |___  /                 | |                  
+2025-04-24 12:36:03,558 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __
+2025-04-24 12:36:03,559 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2025-04-24 12:36:03,561 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |
+2025-04-24 12:36:03,562 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2025-04-24 12:36:03,563 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               | |
+2025-04-24 12:36:03,564 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               |_|
+2025-04-24 12:36:03,573 [myid:] - INFO  [main:o.a.z.ZookeeperBanner@42] -
+2025-04-24 12:36:14,658 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-04-24 12:36:14,659 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:host.name=domainc
+2025-04-24 12:36:14,663 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.version=17.0.11
+2025-04-24 12:36:14,665 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.vendor=Oracle Corporation
+2025-04-24 12:36:14,666 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.home=C:\Program Files\Java\jdk-17
+2025-04-24 12:36:14,667 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.class.path=C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\classes;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\build\lib\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\*;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\audience-annotations-0.12.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-cli-1.5.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\commons-io-2.17.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-annotations-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-core-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jackson-databind-2.15.2.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\javax.servlet-api-3.1.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-http-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-io-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-security-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-server-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-servlet-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jetty-util-ajax-9.4.56.v20240826.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\jline-2.14.6.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-classic-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\logback-core-1.2.13.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\metrics-core-4.1.12.1.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-buffer-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-codec-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-handler-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-resolver-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-aarch_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-osx-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final-windows-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-boringssl-static-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-tcnative-classes-2.0.66.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-classes-epoll-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-epoll-4.1.113.Final-linux-x86_64.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\netty-transport-native-unix-common-4.1.113.Final.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_common-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_hotspot-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\simpleclient_servlet-0.9.0.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\slf4j-api-1.7.30.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\snappy-java-1.1.10.5.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-jute-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\lib\zookeeper-prometheus-metrics-3.9.3.jar;C:\apache-zookeeper-3.9.3-bin-Karthick\bin\..\conf
+2025-04-24 12:36:14,669 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.library.path=C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-17\bin;C:\Users\devops8\AppData\Local\Microsoft\WindowsApps;;.
+2025-04-24 12:36:14,670 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.io.tmpdir=C:\Users\devops8\AppData\Local\Temp\5\
+2025-04-24 12:36:14,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:java.compiler=<NA>
+2025-04-24 12:36:14,681 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.name=Windows Server 2022
+2025-04-24 12:36:14,683 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.arch=amd64
+2025-04-24 12:36:14,684 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.version=10.0
+2025-04-24 12:36:14,685 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.name=devops8
+2025-04-24 12:36:14,686 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.home=C:\Users\devops8
+2025-04-24 12:36:14,687 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:user.dir=C:\apache-zookeeper-3.9.3-bin-Karthick
+2025-04-24 12:36:14,688 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.free=1261MB
+2025-04-24 12:36:14,689 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.max=20480MB
+2025-04-24 12:36:14,695 [myid:] - INFO  [main:o.a.z.Environment@98] - Server environment:os.memory.total=1280MB
+2025-04-24 12:36:14,696 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@149] - zookeeper.enableEagerACLCheck = false
+2025-04-24 12:36:14,697 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@162] - zookeeper.digest.enabled = true
+2025-04-24 12:36:14,698 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@166] - zookeeper.closeSessionTxn.enabled = true
+2025-04-24 12:36:14,699 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@2242] - zookeeper.serializeLastProcessedZxid.enabled = true
+2025-04-24 12:36:14,700 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1585] - zookeeper.flushDelay = 0 ms
+2025-04-24 12:36:14,701 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1594] - zookeeper.maxWriteQueuePollTime = 0 ms
+2025-04-24 12:36:14,702 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1603] - zookeeper.maxBatchSize=1000
+2025-04-24 12:36:14,703 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@287] - zookeeper.intBufferStartingSizeBytes = 1024
+2025-04-24 12:36:14,710 [myid:] - INFO  [main:o.a.z.s.BlueThrottle@141] - Weighed connection throttling is disabled
+2025-04-24 12:36:14,713 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-04-24 12:36:14,714 [myid:] - INFO  [main:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-04-24 12:36:14,718 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 4000 ms
+2025-04-24 12:36:14,719 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 40000 ms
+2025-04-24 12:36:14,724 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getData response cache size is initialized with value 400.
+2025-04-24 12:36:14,725 [myid:] - INFO  [main:o.a.z.s.ResponseCache@45] - getChildren response cache size is initialized with value 400.
+2025-04-24 12:36:14,728 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-04-24 12:36:14,731 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-04-24 12:36:14,732 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-04-24 12:36:14,734 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-04-24 12:36:14,735 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-04-24 12:36:14,736 [myid:] - INFO  [main:o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-04-24 12:36:14,746 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-04-24 12:36:14,746 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-04-24 12:36:14,748 [myid:] - INFO  [main:o.a.z.s.ZooKeeperServer@385] - Created server with tickTime 2000 ms minSessionTimeout 4000 ms maxSessionTimeout 40000 ms clientPortListenBacklog -1 dataLogdir data\version-2 snapdir data\version-2
+2025-04-24 12:36:14,834 [myid:] - INFO  [main:o.e.j.u.l.Log@170] - Logging initialized @12526ms to org.eclipse.jetty.util.log.Slf4jLog
+2025-04-24 12:36:15,020 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1662] - o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STOPPED} contextPath ends with /*
+2025-04-24 12:36:15,021 [myid:] - WARN  [main:o.e.j.s.h.ContextHandler@1673] - Empty contextPath
+2025-04-24 12:36:15,082 [myid:] - INFO  [main:o.e.j.s.Server@375] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.11+7-LTS-207
+2025-04-24 12:36:15,178 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@334] - DefaultSessionIdManager workerName=node0
+2025-04-24 12:36:15,179 [myid:] - INFO  [main:o.e.j.s.s.DefaultSessionIdManager@339] - No SessionScavenger set, using defaults
+2025-04-24 12:36:15,188 [myid:] - INFO  [main:o.e.j.s.s.HouseKeeper@132] - node0 Scavenging every 600000ms
+2025-04-24 12:36:15,198 [myid:] - WARN  [main:o.e.j.s.ConstraintSecurityHandler@759] - ServletContext@o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,STARTING} has uncovered http methods for path: /*
+2025-04-24 12:36:15,227 [myid:] - INFO  [main:o.e.j.s.h.ContextHandler@921] - Started o.e.j.s.ServletContextHandler@2f9f7dcf{/,null,AVAILABLE}
+2025-04-24 12:36:15,255 [myid:] - ERROR [main:o.a.z.s.ZooKeeperServerMain@86] - Unable to start AdminServer, exiting abnormally
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:199)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:155)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.initializeAndRun(ZooKeeperServerMain.java:113)
+        at org.apache.zookeeper.server.ZooKeeperServerMain.main(ZooKeeperServerMain.java:68)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:141)
+        at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)
+Caused by: java.io.IOException: Failed to bind to /0.0.0.0:8080
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+        at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+        at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+        at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+        at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:190)
+        ... 5 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+        at java.base/sun.nio.ch.Net.bind0(Native Method)
+        at java.base/sun.nio.ch.Net.bind(Net.java:555)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+        at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:89)
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+        ... 12 common frames omitted
+Unable to start AdminServer, exiting abnormally
+2025-04-24 12:36:15,270 [myid:] - INFO  [main:o.a.z.a.ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2025-04-24 12:36:15,275 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 4
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>endlocal
+
+C:\apache-zookeeper-3.9.3-bin-Karthick>

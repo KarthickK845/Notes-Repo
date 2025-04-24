@@ -1,0 +1,40 @@
+	-DgroupId = com.ust.training    (package)
+	-DartifactId = "122-MavenProject"  (project name)
+	-DarchetypeArtifactId = maven-archetype-quickstart 
+	-DinteractiveMode = false
+	
+update the same in single-line mvn comman also
+mvn archetype:generate -DgroupId=com.ust.training -DartifactId="122-MavenProject" -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn clean -- cleans the target folder
+
+mvn compile -- compile the project
+
+mvn clean compile -- both clean and compile the project
+
+mvn exec:java		-- another command to run the project if plugin is configured
+
+mvn package 		-- creates the .jar file SNAPSHOT inside target folder
+
+122-MavenProject-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+commands run after adding a dependency and a plugin
+C:\Maven_Projects_Karthick\122-MavenProject>mvn package
+C:\Maven_Projects_Karthick\122-MavenProject>cd target
+C:\Maven_Projects_Karthick\122-MavenProject\target>dir
+
+....
+03/19/2025  12:22 PM         9,131,789 122-MavenProject-1.0-SNAPSHOT-jar-with-dependencies.jar
+03/19/2025  12:22 PM            20,615 122-MavenProject-1.0-SNAPSHOT.jar
+
+C:\Maven_Projects_Karthick\122-MavenProject\target>java -jar 122-MavenProject-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+above project will run the project
+
+mvn install  -- to create package inside a common folder say under Users in C drive, other than project repository/workspace
+
+mvn archetype:generate -DgroupId=com.training -DartifactId="125-Maven-Web-Project" -DarchetypeArtifactId=maven-archetype-webapp
+
+---
+
+standalone application

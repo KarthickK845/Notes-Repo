@@ -1,0 +1,30 @@
+Order By
+
+select concat(name,space(10),country) from persons;    -- creates 10 empty spaces concats with name and country
+name,space(10),country
+'Bakshi          India'
+
+constraints :
+NOT NULL
+primary key
+foreign key
+check
+
+groupby (sum, min, max, avg) - having clause
+
+subquery (nested query) :
+
+Join query :
+
+fetch and Join the records from more than one table.
+	Inner Join
+	Left Outer Join
+	Right Outer Join
+	
+Transaction management
+
+	start transaction
+	rollback/commit
+
+Stored procedure
+

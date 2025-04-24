@@ -1,0 +1,9 @@
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.training.model.Address' available: expected single matching bean but found 2: ChennaiAddress,CochinAddress
+
+when there are two beans of same type are eligible for autowiring
+
+We use Qualifier - autowiring by name
+
+@Autowired   //asking Spring to autowire(inject) the object of Address here
+	@Qualifier("CochinAddress")  //
+	Address address;

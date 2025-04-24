@@ -1,0 +1,31 @@
+create table <<table_name>>
+(
+	<<col_name1>> datatype;
+	<<col_name2>> datatype;
+	<<col_name3>> datatype
+);
+
+select - an important clause in MySQL
+from clause
+
+as - optional clause
+where clause
+
+update query
+update employees set name='Meena';     --will update all the names to 'Meena' since we didn't give where clause
+
+create database
+use
+
+create table
+insert
+
+Create
+Read - Select
+Update
+Delete
+
+In Schemas
+DB -> List of Tables
+
+Right click on the table and Select Rows will also display the Table with data

@@ -1,0 +1,1 @@
+17:34:53	update employees set name='Meena' where id=104	Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.	0.000 sec

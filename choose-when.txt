@@ -1,0 +1,22 @@
+<c:choose>
+				<c:when test="${requestScope.stud.gender}=='M'">
+					<tr>
+						<td><label>Gender</label></td>
+						<td>
+							<input type="radio" name="rad_gender" value="MALE" checked="checked">MALE
+							<input type="radio" name="rad_gender" value="FEMALE">FEMALE
+						</td>
+					</tr>
+				
+				</c:when>
+				<c:when test="${requestScope.stud.gender}=='F'">
+					<tr>
+						<td><label>Gender</label></td>
+						<td>
+							<input type="radio" name="rad_gender" value="MALE">MALE
+							<input type="radio" name="rad_gender" value="FEMALE" checked="checked">FEMALE
+						</td>
+					</tr>
+				
+				</c:when>
+			</c:choose>

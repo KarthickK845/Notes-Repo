@@ -1,0 +1,102 @@
+add the taglib in StudentList.jsp
+
+uri is same ../core
+
+in body
+
+create table
+
+Student student1 = new Student(1088, "Ramesh", "Male", 90, 80);
+		Student student2 = new Student(1089,"Saritha","Female",67,79);
+		Student student3 = new Student(1090,"Mahesh","Male",98,100);
+		Student student4 = new Student(1091,"Sumesh","Male",59,89);
+		Student student5 = new Student(1092,"Kartikeyan","Male",100,100);
+		
+		List<Student> students = new ArrayList<>();
+		students.add(student1);
+		students.add(student2);
+		students.add(student3);
+		students.add(student4);
+		students.add(student5);
+		
+		request.setAttribute("studs", students);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("StudentList.jsp");
+		dispatcher.forward(request, response);
+		
+		 <servlet>
+  	<servlet-name>StudentListController</servlet-name>
+  	<servlet-class>com.training.ui.StudentListControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentListController</servlet-name>
+  	<url-pattern>/SLCS</url-pattern>
+  </servlet-mapping>
+  
+  
+  <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>Roll Number</th>
+		<th>Name</th>
+		<th>Gender</th>
+		<th>Mark 1</th>
+		<th>Mark 2</th>
+		<th>Total</th>
+		<th>Average</th>
+	</tr>
+	<c:forEach items="${requestScope.studs}" var="stud">
+		<tr>
+			<td><c:out value="${stud.rollNumber}"></c:out></td>
+			<td><c:out value="${stud.name}"></c:out></td>
+			<td><c:out value="${stud.gender}"></c:out></td>
+			<td><c:out value="${stud.mark1}"></c:out></td>
+			<td><c:out value="${stud.mark2}"></c:out></td>
+			<td><c:out value="${stud.total}"></c:out></td>
+			<td><c:out value="${stud.average}"></c:out></td>
+		</tr>
+	</c:forEach>
+</table>
+</body>
+</html>
+
+
+
+<c:when test="${requestScope.studs.size()==0}">
+		<!--  when size of collection is zero -->
+		<c:out value="No Students Found"></c:out>
+	</c:when>
+	
+	<c:when test="${requestScope.studs.size()!=0}">
+		<table>
+			<tr>
+				<th>Roll Number</th>
+				<th>Student Name</th>
+				<th>Gender</th>
+				<th>Mark 1</th>
+				<th>Mark 2</th>
+				<th>Total</th>
+				<th>Average</th>
+			</tr>
+			<c:forEach items="${requestScope.studs}" value="stud">
+				<tr>
+					<td><c:out value="${stud.rollNumber}"></c:out></td>
+					<td><c:out value="${stud.name}"></c:out></td>
+					<td><c:out value="${stud.gender}"></c:out></td>
+					<td><c:out value="${stud.mark1}"></c:out></td>
+					<td><c:out value="${stud.mark2}"></c:out></td>
+					<td><c:out value="${stud.total}"></c:out></td>
+					<td><c:out value="${stud.average}"></c:out></td>
+				</tr>
+			</c:forEach>
+		</table>
+	</c:when>

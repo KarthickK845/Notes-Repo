@@ -1,0 +1,95 @@
+<!-- Student is a Bean class -->
+<!-- stud is the reference variable of Student object -->
+
+<!-- getting the property rollNumber from stud object -->
+
+=---------------
+<form action="test5.jsp" method="GET"> 
+
+we will get all the requests parameters and the values entered in the URL bar
+
+http://localhost:9086/128-Web-JSP/test5.jsp?txt_rollnumber=131&txt_name=Bhavya&rad_gender=Female&txt_mark1=98&txt_mark2=100
+
+above is URL - as a whole
+
+after ? in url is called query string
+
+request parameter - txt_rollnumber
+
+<form action="test5.jsp" method="POST"> 
+<!-- POST - doesn't display params and values in URL bar -->
+
+http://localhost:9086/128-Web-JSP/test5.jsp
+
+
+===========================
+
+<jsp:useBean id="stud" class="com.training.model.Student" scope="request"></jsp:useBean>
+
+scopes are :
+-> request - means keep the object in memory until the request is completed
+-> application
+-> page is default scope
+
+
+<!-- though it forwards the data to test7, test7 will not be shown in URL, it will be hidden from client -->
+
+
+===============
+
+Student.java - MODEL - contains the business logic
+test5 - CONTROLLER - gets the input and forwards
+test7 - VIEW logic - the one responsible to present the data
+
+===
+assignment
+
+test9 - CONTROLLER
+test8 - form inputs
+test10 - VIEW
+
+=====
+
+instead of jsp:getProperty ,
+we can use requestScope as part of Expression language in modern jsp pages
+
+=========
+
+In JSP, we write Java code inside HTML tags
+JSP pages are meant for Web Designers
+
+=========
+
+Servlet
+
+inside Java code, we write HTML code
+
+those with minimum knowledge in HTML, go for Servlet pages
+
+===
+
+FirstServlet implements Servlet
+
+add all unimplemented methods
+
+but instead of overriding all methods, we use
+
+--
+
+FirstServlet extends GenericServlet
+
+override service method only
+
+instead of that also, we can use
+
+--
+
+FirstServlet extends HttpServlet
+
+and override only doGet method
+
+===
+
+<!--  we removed welcome file list and instead give below to load the servlet file -->
+
+<!-- below is configuration of servlet -->
